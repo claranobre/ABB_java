@@ -1,5 +1,6 @@
 package br.imd.model;
 
+
 /**
  * 
  * @author gisleude, claranobre
@@ -12,16 +13,6 @@ public class NodeABB {
 	private int key;
 	
 	/**
-	 * Variable to define value of node
-	 */
-	private int value;
-
-	/**
-	 * Variable to define height of node
-	 */
-	private int height;
-	
-	/**
 	 * Variable to define son of the left of node
 	 */
 	private NodeABB left;
@@ -31,18 +22,26 @@ public class NodeABB {
 	 */
 	private NodeABB right;
 	
+	/**
+	 * Variable to define the quantity of left nodes
+	 */
+	private int nodes_left;
 	
+	/**
+	 * Variable to define the quantity of right nodes
+	 */
+	private int nodes_right;
 	/**
 	 * Constructor of class NodeABB
 	 * @param key key of the node
 	 * @param value value of the node
 	 */
-	public NodeABB(int key, int value){
+	public NodeABB(int key){
 		this.key = key;
-		this.value = value;
 		this.left = null;
 		this.right = null;
-		
+		nodes_left = 0;
+		nodes_right = 0;
 	}
 	/**
 	 * Function to get key of node
@@ -52,44 +51,24 @@ public class NodeABB {
 		return key;
 	}
 	
+	public int getNodes_left() {
+		return nodes_left;
+	}
+	public void setNodes_left(int nodes_left) {
+		this.nodes_left = nodes_left;
+	}
+	public int getNodes_right() {
+		return nodes_right;
+	}
+	public void setNodes_right(int nodes_right) {
+		this.nodes_right = nodes_right;
+	}
 	/**
 	 * 
 	 * @param key value to set key of node
 	 */
 	public void setKey(int key) {
 		this.key = key;
-	}
-	
-	/**
-	 * Function to get value of node
-	 * @return value of node
-	 */
-	public int getValue() {
-		return value;
-	}
-	
-	/**
-	 * Function to set value of node
-	 * @param value value to set value of node
-	 */
-	public void setValue(int value) {
-		this.value = value;
-	}
-	
-	/**
-	 * Function to get height of node
-	 * @return the height of node
-	 */
-	public int getHeight() {
-		return height;
-	}
-
-	/**
-	 * Function to set height of node
-	 * @param height value to set height of node
-	 */
-	public void setHeight(int height) {
-		this.height = height;
 	}
 
 	/**
